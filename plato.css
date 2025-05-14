@@ -1,0 +1,138 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.product-detail-container {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-header {
+    background-color: #ffe082; /* Amarillo claro similar */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-button, .wishlist-button {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: #333;
+    cursor: pointer;
+}
+
+.product-image {
+    background-color: #ffe082; /* Fondo amarillo para la curva */
+    padding: 20px;
+    border-radius: 0 0 50% 50%; /* Curva inferior */
+    display: flex;
+    justify-content: center;
+}
+
+.product-image img {
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.product-title {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #333;
+    line-height: 1.2;
+}
+
+.product-description {
+    color: #777;
+    font-size: 0.9em;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.delivery-info {
+    display: flex;
+    align-items: center;
+    color: #555;
+    font-size: 0.85em;
+    margin-bottom: 20px;
+}
+
+.delivery-info i {
+    margin-right: 5px;
+    color: #007bff; /* Azul para el icono de bicicleta */
+}
+
+.product-actions {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.price-quantity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.product-price {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #333;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-button {
+    background: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 0 5px;
+    font-size: 1em;
+    color: #555;
+    cursor: pointer;
+}
+
+.quantity {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+    margin: 0 10px;
+}
+
+.add-to-cart-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-button:hover {
+    background-color: #333;
+}
