@@ -1,130 +1,217 @@
-/* General */
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-}
-
-h1, h2, h3 {
-  margin: 0;
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .container {
-  padding: 20px;
-  padding-bottom: 80px; /* espacio para navegación inferior */
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    overflow: hidden;
 }
 
-/* Header */
-h1 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
+.header {
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px; /* Añadir espacio debajo del header */
 }
 
-.highlight {
-  color: #ff6b00;
+.logo {
+    font-size: 24px;
+    color: #ff9800; /* Naranja similar al de la imagen */
 }
 
-/* Search Bar */
+.header h1 {
+    font-size: 1.5em;
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+    color: #333;
+}
+
+.menu-icon {
+    font-size: 24px;
+    color: #555;
+    cursor: pointer;
+}
+
 .search-bar {
-  display: flex;
-  align-items: center;
-  background-color: #f1f1f1;
-  border-radius: 10px;
-  padding: 10px 15px;
-  margin-bottom: 20px;
+    padding: 15px 20px;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    margin-bottom: 15px; /* Añadir espacio debajo de la barra de búsqueda */
+}
+
+.search-icon {
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #777;
+    font-size: 1em;
+}
+
+.search-bar input::placeholder {
+    padding-left: 30px;
 }
 
 .search-bar input {
-  border: none;
-  background: transparent;
-  flex: 1;
-  font-size: 16px;
-  outline: none;
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-right: 10px;
+    font-size: 1em;
+    padding-left: 40px;
 }
 
-.search-bar i {
-  font-size: 18px;
-  margin-left: 10px;
-  color: #888;
+.filter-icon {
+    font-size: 20px;
+    color: #555;
+    cursor: pointer;
 }
 
-/* Categories */
+.encontrados-section {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; /* Añadir espacio debajo de "Encontrados" */
+}
+
+.encontrados-section h2 {
+    font-size: 1.2em;
+    margin: 0;
+    color: #333;
+}
+
+.encontrados-section .distance {
+    color: #ff9800;
+    font-weight: bold;
+}
+
 .categories {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
+    display: flex;
+    background-color: #fff;
+    border-bottom: 2px solid #ff9800; /* Línea naranja inferior */
+    margin-bottom: 20px; /* Añadir espacio debajo de las categorías */
 }
 
-.category-btn {
-  background-color: #ffe5cc;
-  color: #ff6b00;
-  padding: 8px 14px;
-  border-radius: 20px;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
+.categories button {
+    background: none;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1em;
+    color: #555;
+    cursor: pointer;
+    flex-grow: 1;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.category-btn.active {
-  background-color: #ff6b00;
-  color: white;
+.categories button.active {
+    color: #333;
+    font-weight: bold;
+    border-bottom: 3px solid #ff9800; /* Indicador activo */
 }
 
-/* Cards */
-.cards {
-  display: flex;
-  gap: 15px;
-  overflow-x: auto;
-  padding-bottom: 10px;
+.categories button:hover {
+    background-color: #f0f0f0;
 }
 
-.card {
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  padding: 15px;
-  min-width: 160px;
-  flex-shrink: 0;
+.food-grid {
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); /* Aumentar el ancho mínimo de las columnas */
+    gap: 20px; /* Aumentar el espacio entre los elementos de la grid */
 }
 
-.card img {
-  width: 100%;
-  border-radius: 10px;
-  object-fit: cover;
-  height: 100px;
+.food-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
 }
 
-.card h3 {
-  font-size: 16px;
-  margin: 10px 0 5px;
+.food-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+    display: block;
+    margin-bottom: 8px; /* Añadir espacio debajo de la imagen */
 }
 
-.card .info {
-  font-size: 14px;
-  color: #555;
+.food-item h3 {
+    font-size: 1em;
+    margin: 0 10px 5px; /* Reducir el margen superior y añadir inferior */
+    color: #333;
 }
 
-.card .price {
-  font-weight: bold;
-  margin-top: 5px;
+.food-item .details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    color: #777;
+    font-size: 0.8em;
+    margin-bottom: 8px; /* Añadir espacio debajo de los detalles */
 }
 
-/* Bottom Nav */
-.bottom-nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: white;
-  display: flex;
-  justify-content: space-around;
-  padding: 10px 0;
-  border-top: 1px solid #ddd;
+.food-item .details span i {
+    margin-right: 5px;
 }
 
-.bottom-nav i {
-  font-size: 24px;
-  color: #555;
+.food-item .price {
+    padding: 0 10px 10px; /* Añadir padding inferior */
+    font-weight: bold;
+    color: #333;
+    font-size: 1em;
+}
+
+.food-item.selectable:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.food-item.selectable.selected {
+    border: 2px solid #ff9800;
+}
+
+.bottom-navigation {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+    border-radius: 0 0 15px 15px;
+    margin-top: 20px; /* Añadir espacio encima de la navegación inferior */
+}
+
+.bottom-navigation a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.bottom-navigation a i {
+    /* Estilos para los iconos de la navegación inferior si usas Font Awesome */
+}
+
+.bottom-navigation a.active {
+    color: #ff9800;
 }
