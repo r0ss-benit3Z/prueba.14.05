@@ -1,11 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comida de gatos</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+  <div class="app">
+    <header
+      <div class="logo">🔥</div>
+      <div class="menu">☰</div>
+    </header>
+    <main>
+      <h1>Encontrá buena<br>comida cerca tuyo</h1>
+      <div class="search-bar">
+        <input type="text" placeholder="Buscá tu plato acá...">
+        <span class="icon">🔍</span>
+      </div>
+      <div class="location">
+        <h2>Encontrados <span class="distance">5km</span></h2>
+      </div>
+      <div class="categories">
+        <button class="active">Ensaladas</button>
+        <button>Comidas Calientes</button>
+        <button>Popular</button>
+      </div>
+      <div class="food-list">
+        <div class="card">
+          <img src="../img/ensalada1.jpg" alt="Broccoli Mix">
+          <h3>Broccoli Mix</h3>
+          <p>50mins • ⭐ 4.5</p>
+          <p class="price">$4650.00</p>
+        </div>
+        <div class="card">
+          <img src="../img/ensalada2.jpg" alt="Chicken Veggie">
+          <h3>Chicken Veggie</h3>
+          <p>50mins • ⭐ 4.8</p>
+          <p class="price">$3850.00</p>
+        </div>
+      </div>
+    </main>
+    <nav class="bottom-nav">
+      <span>🏠</span>
+      <span>📍</span>
+      <span>🖤</span>
+      <span>🛒</span>
+    </nav>
+  </div>
 </body>
 </html>
