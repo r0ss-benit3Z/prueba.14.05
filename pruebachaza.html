@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comida Cerca de Ti</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> </head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">🔥</div>
+            <h1>Encontrá buena comida cerca tuyo</h1>
+            <div class="menu-icon">☰</div>
+        </header>
+
+        <div class="search-bar">
+            <i class="fas fa-search search-icon"></i> <input type="text" placeholder="Buscá tu plato acá...">
+            <div class="filter-icon">⚙️</div>
+        </div>
+
+        <div class="encontrados-section">
+            <h2>Encontrados</h2>
+            <div class="distance">5km</div>
+        </div>
+
+        <nav class="categories">
+            <button class="active">Ensaladas</button>
+            <button>Comidas Calientes</button>
+            <button>Popular</button>
+        </nav>
+
+        <div class="food-grid">
+
+            <a href="plato.html" class="food-item selectable">
+                <img src="plato.jpg" alt="Mi Plato">
+                <img src="" alt="ensalada cesar">
+                <h3>Ensalada César</h3>
+                <div class="details">
+                    <span><i class="far fa-clock"></i> 45mins</span>
+                    <span><i class="fas fa-star"></i> 4.3</span>
+                </div>
+                <div class="price">$7500.00</div>
+            </a>
+
+            <div class="food-item selectable">
+                <a href="plato.html"
+                <img src="https://via.placeholder.com/150/f44336/FFFFFF?Text=Chicken%20Veggie" alt="Empanadas Veggie">
+                <h3>Empanadas Veggie</h3>
+                <div class="details">
+                    <span><i class="far fa-clock"></i> 40mins</span>
+                    <span><i class="fas fa-star"></i> 4.8</span>
+                </div>
+                <div class="price">$10000.00</div>
+            </div>
+            <div class="food-item selectable">
+                <a href="plato.html"
+                <img src="https://via.placeholder.com/150/4caf50/FFFFFF?Text=Otro%20Plato" alt="Otro Plato">
+                <h3>Legumbres</h3>
+                <div class="details">
+                    <span><i class="far fa-clock"></i> 40mins</span>
+                    <span><i class="fas fa-star"></i> 4.5</span>
+                </div>
+                <div class="price">$4200.00</div>
+            </div>
+            <div class="food-item selectable">
+                <a href="plato.html"
+                <img src="https://via.placeholder.com/150/ff9800/FFFFFF?Text=Ensalada%20Variada" alt="Ensalada Variada">
+                <h3>Falafel</h3>
+                <div class="details">
+                    <span><i class="far fa-clock"></i> 35mins</span>
+                    <span><i class="fas fa-star"></i> 4.7</span>
+                </div>
+                <div class="price">$3500.00</div>
+            </div>
+        </div>
+
+        <nav class="bottom-navigation">
+            <a href="#" class="nav-item active"><i class="fas fa-home"></i></a>
+            <a href="#" class="nav-item"><i class="far fa-file-alt"></i></a>
+            <a href="#" class="nav-item"><i class="fas fa-map-marker-alt"></i></a>
+            <a href="#" class="nav-item"><i class="far fa-heart"></i></a>
+            <a href="#" class="nav-item"><i class="far fa-user"></i></a>
+        </nav>
+    </div>
+</body>
+</html>

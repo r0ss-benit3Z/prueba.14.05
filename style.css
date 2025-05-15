@@ -23,12 +23,14 @@ body {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #eee;
-    margin-bottom: 15px; /* Añadir espacio debajo del header */
 }
 
 .logo {
     font-size: 24px;
-    color: #ff9800; /* Naranja similar al de la imagen */
+    color: #ff9800; 
+    
+    
+ 
 }
 
 .header h1 {
@@ -51,31 +53,15 @@ body {
     display: flex;
     align-items: center;
     border-bottom: 1px solid #eee;
-    position: relative;
-    margin-bottom: 15px; /* Añadir espacio debajo de la barra de búsqueda */
 }
 
-.search-icon {
-    position: absolute;
-    left: 30px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #777;
-    font-size: 1em;
-}
-
-.search-bar input::placeholder {
-    padding-left: 30px;
-}
-
-.search-bar input {
+.search-bar input[type="text"] {
     flex-grow: 1;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 8px;
     margin-right: 10px;
     font-size: 1em;
-    padding-left: 40px;
 }
 
 .filter-icon {
@@ -89,7 +75,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px; /* Añadir espacio debajo de "Encontrados" */
 }
 
 .encontrados-section h2 {
@@ -106,8 +91,9 @@ body {
 .categories {
     display: flex;
     background-color: #fff;
-    border-bottom: 2px solid #ff9800; /* Línea naranja inferior */
-    margin-bottom: 20px; /* Añadir espacio debajo de las categorías */
+    border-bottom: 2px solid #ff9800; 
+   
+
 }
 
 .categories button {
@@ -125,7 +111,8 @@ body {
 .categories button.active {
     color: #333;
     font-weight: bold;
-    border-bottom: 3px solid #ff9800; /* Indicador activo */
+    border-bottom: 3px solid #ff9800; 
+   
 }
 
 .categories button:hover {
@@ -135,8 +122,8 @@ body {
 .food-grid {
     padding: 15px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); /* Aumentar el ancho mínimo de las columnas */
-    gap: 20px; /* Aumentar el espacio entre los elementos de la grid */
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 15px;
 }
 
 .food-item {
@@ -144,8 +131,6 @@ body {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     overflow: hidden;
-    transition: transform 0.2s ease-in-out;
-    cursor: pointer;
 }
 
 .food-item img {
@@ -153,12 +138,11 @@ body {
     height: auto;
     border-radius: 10px 10px 0 0;
     display: block;
-    margin-bottom: 8px; /* Añadir espacio debajo de la imagen */
 }
 
 .food-item h3 {
     font-size: 1em;
-    margin: 0 10px 5px; /* Reducir el margen superior y añadir inferior */
+    margin: 10px;
     color: #333;
 }
 
@@ -169,27 +153,23 @@ body {
     padding: 0 10px;
     color: #777;
     font-size: 0.8em;
-    margin-bottom: 8px; /* Añadir espacio debajo de los detalles */
+    margin-bottom: 5px;
 }
 
-.food-item .details span i {
-    margin-right: 5px;
+.food-item .details span:first-child::before {
+    content: "⏱️ ";
+}
+
+.food-item .details span:last-child::before {
+    content: "⭐ ";
+    color: #ffc107;
 }
 
 .food-item .price {
-    padding: 0 10px 10px; /* Añadir padding inferior */
+    padding: 10px;
     font-weight: bold;
     color: #333;
     font-size: 1em;
-}
-
-.food-item.selectable:hover {
-    transform: scale(1.02);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.food-item.selectable.selected {
-    border: 2px solid #ff9800;
 }
 
 .bottom-navigation {
@@ -198,18 +178,12 @@ body {
     display: flex;
     justify-content: space-around;
     padding: 15px 0;
-    border-radius: 0 0 15px 15px;
-    margin-top: 20px; /* Añadir espacio encima de la navegación inferior */
 }
 
 .bottom-navigation a {
     color: #fff;
     text-decoration: none;
     font-size: 1.5em;
-}
-
-.bottom-navigation a i {
-    /* Estilos para los iconos de la navegación inferior si usas Font Awesome */
 }
 
 .bottom-navigation a.active {
